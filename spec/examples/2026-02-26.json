@@ -1,0 +1,13 @@
+{
+  "entries": [{
+    "id": 0,
+    "start": "2026-02-26 08:15",
+    "end": "2026-02-26 16:15",
+    "total_calculated": "08:00",
+    "total_used_for_reporting": "07:45",
+    "place": "OFFICE"
+  }],
+
+  "pensum": "08:00",
+  "day_type": "REGULAR"
+}
