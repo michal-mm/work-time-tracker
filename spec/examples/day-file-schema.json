@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Time Tracking Entry",
+  "description": "Schema for daily time tracking records",
+  "type": "object",
+  "required": [
+    "pensum",
+    "day_type"
+  ],
+  "properties": {
+    "entries": {
+      "type": "array",
+      "description": "List of time entries for the day",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "start",
+          "end",
+          "total_calculated",
+          "total_used_for_reporting",
+          "place",
+          "paid_overhours"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Unique identifier for the entry",
+            "minimum": 0
+          },
+          "start": {
+            "type": "string",
+            "description": "Start datetime of the entry (YYYY-MM-DD HH:MM)",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}$"
+          },
+          "end": {
+            "type": "string",
+            "description": "End datetime of the entry (YYYY-MM-DD HH:MM)",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}$"
+          },
+          "total_calculated": {
+            "type": "string",
+            "description": "Calculated total duration of the entry (HH:MM)",
+            "pattern": "^\\d{2}:\\d{2}$"
+          },
+          "total_used_for_reporting": {
+            "type": "string",
+            "description": "Adjusted total duration used for reporting purposes (HH:MM)",
+            "pattern": "^\\d{2}:\\d{2}$"
+          },
+          "place": {
+            "type": "string",
+            "description": "Location where the work was performed",
+            "enum": ["OFFICE", "HOME", "CLIENT"]
+          },
+          "paid_overhours": {
+            "type": "string",
+            "description": "Hours marked as paid overhours",
+            "pattern": "^\\d{2}:\\d{2}"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "pensum": {
+      "type": "string",
+      "description": "Expected working duration for the day (HH:MM)",
+      "pattern": "^\\d{2}:\\d{2}$"
+    },
+    "day_type": {
+      "type": "string",
+      "description": "Type of the working day",
+      "enum": [
+        "PUBLIC_HOLIDAY",
+        "REGULAR",
+        "SICK_LEAVE",
+        "TIME_OFF",
+        "VACATION",
+        "VACATION_FOR_SATURDAY_HOLIDAY",
+        "WEEKEND"
+      ]
+    }
+  },
+  "additionalProperties": false
+}
