@@ -15,19 +15,19 @@ This implementation plan breaks down the Work Time Tracker into discrete coding 
   - _Requirements: 9.1, 9.2_
 
 - [ ] 2. Implement Entity Layer
-  - [ ] 2.1 Create enumeration types
+  - [x] 2.1 Create enumeration types
     - Implement DayType enum with all seven values (PUBLIC_HOLIDAY, REGULAR, SICK_LEAVE, TIME_OFF, VACATION, VACATION_FOR_SATURDAY_HOLIDAY, WEEKEND)
     - Implement WorkPlace enum with three values (OFFICE, HOME, CLIENT)
     - Add Jackson annotations for JSON serialization
     - _Requirements: 12.1, 12.2, 12.3, 13.1, 13.2, 13.3, 13.4, 13.5, 13.6, 13.7_
   
-  - [ ]* 2.2 Write unit tests for enumerations
+  - [x]* 2.2 Write unit tests for enumerations
     - Test enum value parsing from JSON
     - Test enum serialization to JSON
     - Test invalid enum value handling
     - _Requirements: 12.1-12.5, 13.1-13.8_
   
-  - [ ] 2.3 Implement TimeEntry entity
+  - [x] 2.3 Implement TimeEntry entity
     - Create TimeEntry class with all fields (id, start, end, totalCalculated, totalUsedForReporting, place, paidOverhours)
     - Add Jackson annotations for JSON serialization
     - Implement validation methods for field constraints
