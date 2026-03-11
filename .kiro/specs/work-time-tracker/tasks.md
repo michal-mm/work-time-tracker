@@ -38,7 +38,7 @@ This implementation plan breaks down the Work Time Tracker into discrete coding 
     - **Property 10: End Timestamp After Start**
     - **Validates: Requirements 6.1**
   
-  - [ ]* 2.5 Write property test for TimeEntry
+  - [x] 2.5 Write property test for TimeEntry
     - **Property 5: Time Entry Consistency**
     - **Validates: Requirements 6.1**
   
