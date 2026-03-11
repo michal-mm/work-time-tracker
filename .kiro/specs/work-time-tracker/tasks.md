@@ -34,7 +34,7 @@ This implementation plan breaks down the Work Time Tracker into discrete coding 
     - Add equals/hashCode/toString methods
     - _Requirements: 1.2, 1.3, 9.3, 12.4, 15.1, 15.3, 15.4_
   
-  - [ ]* 2.4 Write property test for TimeEntry
+  - [x] 2.4 Write property test for TimeEntry
     - **Property 10: End Timestamp After Start**
     - **Validates: Requirements 6.1**
   
